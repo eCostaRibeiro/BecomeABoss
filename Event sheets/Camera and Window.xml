@@ -11,8 +11,8 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Set position" sid="9061706332431578" type="Camera">
-                            <param id="0" name="X">lerp(Self.X, Player.X, 0.1)</param>
-                            <param id="1" name="Y">lerp(Self.Y, Player.Y-25, 0.1)</param>
+                            <param id="0" name="X">lerp(Self.X, Player.X, 1)</param>
+                            <param id="1" name="Y">lerp(Self.Y, Player.Y-25, 1)</param>
                         </action>
                         <action id="-3" name="Set position" sid="2451561192313341" type="spr_Player">
                             <param id="0" name="X">Player.X</param>
