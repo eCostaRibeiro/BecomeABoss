@@ -1933,8 +1933,19 @@
                                 <jump-strength>200</jump-strength>
                                 <gravity>880</gravity>
                                 <max-fall-speed>500</max-fall-speed>
-                                <double-jump>Disabled</double-jump>
+                                <double-jump>Enabled</double-jump>
                                 <jump-sustain>220</jump-sustain>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>Left &amp; right</directions>
+                                <set-angle>No</set-angle>
                                 <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
@@ -1943,8 +1954,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>38</x>
-                        <y>486</y>
+                        <x>396</x>
+                        <y>328</y>
                         <z>0</z>
                         <width>13</width>
                         <height>29</height>

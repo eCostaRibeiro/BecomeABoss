@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Controls and Animations</name>
     <events>
+        <variable constant="0" name="EstaNoChao" sid="9794393158655652" static="0" type="number">0</variable>
         <event-group description="" sid="1400478516884802" title="CONTROLS AND ANIMATIONS">
             <sub-events>
                 <event-group description="" sid="6887311582655196" title="Basic_Controls">
@@ -220,6 +221,21 @@
                                 <action behavior="Platform" id="12" name="Fall through" sid="8692419554539575" type="Player" />
                             </actions>
                         </event-block>
+                        <event-block sid="4004334311430557">
+                            <conditions>
+                                <condition id="3" name="Is button down" sid="5638834885408596" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">13</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="823743702369804" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="12" name="Fall through" sid="2108699263492766" type="Player" />
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-group>
             </sub-events>
@@ -263,6 +279,10 @@
                     <param id="2" name="X">Player.X</param>
                     <param id="3" name="Y">Player.Y</param>
                 </action>
+                <action id="-9" name="Set value" sid="8745520233886247" type="System">
+                    <param id="0" name="Variable">EstaNoChao</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="867907209239505">
@@ -273,6 +293,64 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="4702545416628721" type="spr_Dirty" />
+            </actions>
+        </event-block>
+        <event-block sid="5311614470312749">
+            <conditions>
+                <condition id="6" name="On button pressed" sid="5486033576753136" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">7</param>
+                </condition>
+                <condition id="7" name="Is mirrored" sid="5747614630001154" type="spr_Player" />
+                <condition id="-14" name="Compare variable" sid="9416322160377815" type="System">
+                    <param id="0" name="Variable">EstaNoChao</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="11" name="Set enabled" sid="3235567151347563" type="Player">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="8Direction" id="9" name="Set vector X" sid="3009173677927279" type="Player">
+                    <param id="0" name="Vector X">-300</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="7295279284785711" type="Player">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="367861883558192" type="System">
+                    <param id="0" name="Variable">EstaNoChao</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6888772101472824">
+            <conditions>
+                <condition id="6" name="On button pressed" sid="8467795761117077" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">7</param>
+                </condition>
+                <condition id="7" inverted="1" name="Is mirrored" sid="2324581234350742" type="spr_Player" />
+                <condition id="-14" name="Compare variable" sid="4579870729906842" type="System">
+                    <param id="0" name="Variable">EstaNoChao</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="11" name="Set enabled" sid="194725071010149" type="Player">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="8Direction" id="9" name="Set vector X" sid="7597851372710405" type="Player">
+                    <param id="0" name="Vector X">300</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="2466592615726446" type="Player">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="5966461501939943" type="System">
+                    <param id="0" name="Variable">EstaNoChao</param>
+                    <param id="1" name="Value">1</param>
+                </action>
             </actions>
         </event-block>
     </events>
