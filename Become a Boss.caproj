@@ -17,10 +17,12 @@
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Persist" version="1">Persist</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -49,7 +51,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">Chrome</prop>
+        <prop name="Preview browser">NW.js</prop>
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -422,12 +424,86 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Enemy_01" sid="969885180454718">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Move_Time" sid="9514697089707359" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="CustomMovement" sid="1336599768282881">
+                    <behavior id="custom" />
+                </behavior-type>
+                <behavior-type name="Platform" sid="2670003417798342">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="155156577282313" speed="5">
+                    <frame duration="1" hotspotX="0.533333" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spr_Move_Border" sid="1258797458759317">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="625954521812225" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spr_Enemy_02" sid="1088631366172885">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="On_Atack" sid="4594492449234873" type="boolean" />
+                <instance-variable name="Time_To_Atack" sid="4138895697073815" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6023489597709772" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Colider_Area_Archer" sid="7981139869317243">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3223339053457808" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Arrow_01" sid="1634254165432">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="7877604462487718">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7041037495990135" speed="5">
+                    <frame duration="1" hotspotX="0.0454545" hotspotY="0.666667" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Arrow_02" sid="8483469638351474">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="9411112247670802">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3931196997824084" speed="5">
+                    <frame duration="1" hotspotX="1" hotspotY="0.666667" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Base.xml</layout>
         <layout>Stage01.xml</layout>
         <layout>Temple_Teste.xml</layout>
+        <layout>Enemy_Workflow.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Main.xml</event-sheet>
@@ -436,6 +512,7 @@
         <event-sheet>Stage01.xml</event-sheet>
         <event-sheet>Doors.xml</event-sheet>
         <event-sheet>Temple_Teste.xml</event-sheet>
+        <event-sheet>Enemy_Workflow.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="3" />
