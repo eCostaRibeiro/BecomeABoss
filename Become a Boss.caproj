@@ -17,12 +17,16 @@
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Persist" version="1">Persist</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
-    <used-effects />
+    <used-effects>
+        <effect author="Viktor Korsun" id="water">Water</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -73,6 +77,9 @@
             <behaviors>
                 <behavior-type name="Platform" sid="9629686507297518">
                     <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="Persist" sid="6213875809587418">
+                    <behavior id="Persist" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -312,17 +319,119 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="spr_Door" sid="7926316521233724">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8317920777156573" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spr_Background_Temple" sid="9870901828748726">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="5" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7424477196356899" speed="3">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\brank\Desktop\become a boss\Temples\Temple_01_teste\01.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\brank\Desktop\become a boss\Temples\Temple_01_teste\02.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\brank\Desktop\become a boss\Temples\Temple_01_teste\03.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\brank\Desktop\become a boss\Temples\Temple_01_teste\04.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\brank\Desktop\become a boss\Temples\Temple_01_teste\05.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spr_solo" sid="4707918870275598">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="5359219974681727">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2026073180429113" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\brank\Desktop\become a boss\Temples\Temple_01_teste\SOLO3.png">
+                        <collision-poly>
+                            <point x="0" y="0.5" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spr_Losang" sid="2312516923644766">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="7832712979535514">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Sine2" sid="4258263436724482">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2635463992646686" speed="5">
+                    <frame duration="1" hotspotX="0.504854" hotspotY="0.504854" original-source="C:\Users\brank\Desktop\become a boss\Temples\Temple_01_teste\Losang.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spr_Jump_Through" sid="3102043118984445">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="9423412537949278">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2038801917795782" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="7751773592288124">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="Water">
+                    <effect id="water" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9769534972630494" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\brank\Desktop\become a boss\Temples\Temple_01_teste\water.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spr_Vector_Door" sid="4166286513535361">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8802823266193397" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spr_Vector" sid="7749588231120669">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7304080451663489" speed="4">
+                    <frame duration="1" hotspotX="0.526316" hotspotY="0.529412" original-source="C:\Users\brank\Desktop\become a boss\Things\Vector_Door\01.png" />
+                    <frame duration="1" hotspotX="0.526316" hotspotY="0.529412" original-source="C:\Users\brank\Desktop\become a boss\Things\Vector_Door\02.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Base.xml</layout>
         <layout>Stage01.xml</layout>
+        <layout>Temple_Teste.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Main.xml</event-sheet>
         <event-sheet>Controls and Animations.xml</event-sheet>
         <event-sheet>Camera and Window.xml</event-sheet>
         <event-sheet>Stage01.xml</event-sheet>
+        <event-sheet>Doors.xml</event-sheet>
+        <event-sheet>Temple_Teste.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="3" />
