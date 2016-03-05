@@ -18,6 +18,10 @@
                             <param id="0" name="X">Player.X</param>
                             <param id="1" name="Y">Player.Y</param>
                         </action>
+                        <action id="-3" name="Set position" sid="1723076795516858" type="spr_Vector">
+                            <param id="0" name="X">Player.X</param>
+                            <param id="1" name="Y">Player.Y-45</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
