@@ -18,7 +18,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Persist" version="1">Persist</behavior>
-        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8Direction</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
@@ -76,13 +76,14 @@
         <object-type name="Player" sid="2263789141353901">
             <plugin id="Sprite" />
             <behaviors>
-                <behavior-type name="Platform" sid="9629686507297518">
-                    <behavior id="Platform" />
-                </behavior-type>
                 <behavior-type name="Persist" sid="6213875809587418">
                     <behavior id="Persist" />
-                <behavior-type name="8Direction" sid="5862496884483778">
-                    <behavior id="EightDir" />
+                </behavior-type>
+				<behavior-type name="8 Direction" sid="5862496884483778">
+						<behavior id="EightDir" /> 
+                </behavior-type>
+				<behavior-type name="Platform" sid="9629686507297518">
+                    <behavior id="Platform" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
