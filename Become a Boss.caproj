@@ -45,7 +45,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">(default)</prop>
+        <prop name="Preview browser">NW.js</prop>
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -126,13 +126,13 @@
                     <frame duration="1" hotspotX="0.535714" hotspotY="0.969697" original-source="C:\Users\brank\Desktop\become a boss\Animation\Idle\03.png" />
                     <frame duration="1" hotspotX="0.535714" hotspotY="0.969697" original-source="C:\Users\brank\Desktop\become a boss\Animation\Idle\04.png" />
                 </animation>
-                <animation framecount="4" loop="0" name="Jumping" pingpong="0" repeatcount="0" repeatto="0" sid="1276324533952826" speed="10">
+                <animation framecount="3" loop="0" name="Jumping" pingpong="0" repeatcount="0" repeatto="0" sid="1276324533952826" speed="6">
                     <frame duration="1" hotspotX="0.55" hotspotY="0.925" original-source="C:\Users\brank\Desktop\become a boss\Animation\Jumping\01.png" />
                     <frame duration="1" hotspotX="0.55" hotspotY="0.925" />
                     <frame duration="1" hotspotX="0.55" hotspotY="0.925" original-source="C:\Users\brank\Desktop\become a boss\Animation\Jumping\02.png" />
-                    <frame duration="1" hotspotX="0.55" hotspotY="0.925" original-source="C:\Users\brank\Desktop\become a boss\Animation\Jumping\03.png" />
                 </animation>
-                <animation framecount="1" loop="0" name="Falling" pingpong="0" repeatcount="1" repeatto="0" sid="7421375200484354" speed="10">
+                <animation framecount="2" loop="0" name="Falling" pingpong="0" repeatcount="1" repeatto="0" sid="7421375200484354" speed="10">
+                    <frame duration="1" hotspotX="0.55" hotspotY="0.925" original-source="C:\Users\brank\Desktop\become a boss\Animation\Jumping\03.png" />
                     <frame duration="1" hotspotX="0.55" hotspotY="0.925" original-source="C:\Users\brank\Desktop\become a boss\Animation\Falling\01_teste.png" />
                 </animation>
             </animation-folder>
@@ -146,14 +146,6 @@
             </behaviors>
             <texture />
             <tiles>
-                <tile id="0">
-                    <collision-poly>
-                        <point x="0" y="0.0625" />
-                        <point x="1" y="0.0625" />
-                        <point x="1" y="1" />
-                        <point x="0" y="1" />
-                    </collision-poly>
-                </tile>
                 <tile id="1">
                     <collision-poly>
                         <point x="0" y="0.0625" />
@@ -317,7 +309,7 @@
         <object-type name="spr_Dirty" sid="4913419857478637">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="3" loop="0" name="Dirty_animation" pingpong="0" repeatcount="1" repeatto="0" sid="9218934854698684" speed="8">
+                <animation framecount="3" loop="0" name="Dirty_animation" pingpong="0" repeatcount="1" repeatto="0" sid="9218934854698684" speed="10">
                     <frame duration="1" hotspotX="0.466667" hotspotY="0.65" original-source="C:\Users\brank\Desktop\become a boss\Animation\Dirty\01.png" />
                     <frame duration="1" hotspotX="0.466667" hotspotY="0.65" original-source="C:\Users\brank\Desktop\become a boss\Animation\Dirty\02.png" />
                     <frame duration="1" hotspotX="0.466667" hotspotY="0.65" original-source="C:\Users\brank\Desktop\become a boss\Animation\Dirty\03.png" />
