@@ -166,7 +166,7 @@
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
-                <x>0.25</x>
+                <x>0.15</x>
                 <y>0.25</y>
             </parallax>
             <zoom-rate>1</zoom-rate>
@@ -339,7 +339,7 @@
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
-                <x>0.35</x>
+                <x>0.2</x>
                 <y>0.35</y>
             </parallax>
             <zoom-rate>1</zoom-rate>
