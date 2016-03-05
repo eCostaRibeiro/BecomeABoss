@@ -3,7 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Controls and Animations</name>
     <events>
-        <variable constant="0" name="EstaNoChao" sid="9794393158655652" static="0" type="number">0</variable>
         <event-group description="" sid="1400478516884802" title="CONTROLS AND ANIMATIONS">
             <sub-events>
                 <event-group description="" sid="6887311582655196" title="Basic_Controls">
@@ -12,6 +11,9 @@
                             <conditions>
                                 <condition id="2" name="Key is down" sid="9943118337846174" type="Keyboard">
                                     <param id="0" name="Key">39 (Right arrow)</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="7273653037476053" type="spr_Player">
+                                    <param id="0" name="Animation">&quot;attack&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -25,6 +27,9 @@
                                 <condition id="2" name="Key is down" sid="591861250483613" type="Keyboard">
                                     <param id="0" name="Key">37 (Left arrow)</param>
                                 </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="789500406236587" type="spr_Player">
+                                    <param id="0" name="Animation">&quot;attack&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="7" name="Set mirrored" sid="363652301027431" type="spr_Player">
@@ -37,6 +42,9 @@
                                 <condition id="2" name="Key is down" sid="5708069805523806" type="Keyboard">
                                     <param id="0" name="Key">39 (Right arrow)</param>
                                 </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="1505957123302086" type="spr_Player">
+                                    <param id="0" name="Animation">&quot;attack&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action behavior="Platform" id="7" name="Simulate control" sid="9349367633948016" type="Player">
@@ -48,6 +56,9 @@
                             <conditions>
                                 <condition id="2" name="Key is down" sid="8612131945282453" type="Keyboard">
                                     <param id="0" name="Key">37 (Left arrow)</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="9516413763297002" type="spr_Player">
+                                    <param id="0" name="Animation">&quot;attack&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -64,6 +75,9 @@
                                 <condition id="2" inverted="1" name="Key is down" sid="219543804393203" type="Keyboard">
                                     <param id="0" name="Key">40 (Down arrow)</param>
                                 </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="6998975503620123" type="spr_Player">
+                                    <param id="0" name="Animation">&quot;attack&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action behavior="Platform" id="7" name="Simulate control" sid="9367035316881723" type="Player">
@@ -71,17 +85,14 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block any="1" sid="9015793578061523">
+                        <event-block sid="9015793578061523">
                             <conditions>
-                                <condition id="5" name="Compare axis" sid="4129163186363802" type="Gamepad">
-                                    <param id="0" name="Gamepad">0</param>
-                                    <param id="1" name="Axis">0</param>
-                                    <param id="2" name="Comparison">4</param>
-                                    <param id="3" name="Value">0</param>
-                                </condition>
                                 <condition id="3" name="Is button down" sid="9916185991934698" type="Gamepad">
                                     <param id="0" name="Gamepad">0</param>
                                     <param id="1" name="Button">15</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="9020808384170838" type="spr_Player">
+                                    <param id="0" name="Animation">&quot;attack&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -97,17 +108,14 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block any="1" sid="4943596035824976">
+                        <event-block sid="4943596035824976">
                             <conditions>
-                                <condition id="5" name="Compare axis" sid="6410670569558817" type="Gamepad">
-                                    <param id="0" name="Gamepad">0</param>
-                                    <param id="1" name="Axis">0</param>
-                                    <param id="2" name="Comparison">2</param>
-                                    <param id="3" name="Value">0</param>
-                                </condition>
                                 <condition id="3" name="Is button down" sid="7454448072583808" type="Gamepad">
                                     <param id="0" name="Gamepad">0</param>
                                     <param id="1" name="Button">14</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="9352206697561672" type="spr_Player">
+                                    <param id="0" name="Animation">&quot;attack&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -129,11 +137,149 @@
                                     <param id="0" name="Gamepad">0</param>
                                     <param id="1" name="Button">0</param>
                                 </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="6839228449283973" type="spr_Player">
+                                    <param id="0" name="Animation">&quot;attack&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action behavior="Platform" id="7" name="Simulate control" sid="4668168450192929" type="Player">
                                     <param id="0" name="Control">2</param>
                                 </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="5076051789776814" title="Dash">
+                    <sub-events>
+                        <event-block sid="5311614470312749">
+                            <conditions>
+                                <condition id="6" name="On button pressed" sid="5486033576753136" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">7</param>
+                                </condition>
+                                <condition id="7" name="Is mirrored" sid="5747614630001154" type="spr_Player" />
+                                <condition id="2" inverted="1" name="Is playing" sid="2120541088571635" type="spr_Player">
+                                    <param id="0" name="Animation">&quot;attack&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="3235567151347563" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="8Direction" id="9" name="Set vector X" sid="3009173677927279" type="Player">
+                                    <param id="0" name="Vector X">-300</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="7295279284785711" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="8975268169820265" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6888772101472824">
+                            <conditions>
+                                <condition id="6" name="On button pressed" sid="8467795761117077" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">7</param>
+                                </condition>
+                                <condition id="7" inverted="1" name="Is mirrored" sid="2324581234350742" type="spr_Player" />
+                                <condition id="2" inverted="1" name="Is playing" sid="1372552836553548" type="spr_Player">
+                                    <param id="0" name="Animation">&quot;attack&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="194725071010149" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="8Direction" id="9" name="Set vector X" sid="7597851372710405" type="Player">
+                                    <param id="0" name="Vector X">300</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="2466592615726446" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="1427197034188255" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8027443934993714">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="2662860683837272" type="Keyboard">
+                                    <param id="0" name="Key">81 (Q)</param>
+                                </condition>
+                                <condition id="7" name="Is mirrored" sid="7166140390951169" type="spr_Player" />
+                                <condition id="2" inverted="1" name="Is playing" sid="4918531622810094" type="spr_Player">
+                                    <param id="0" name="Animation">&quot;attack&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="5164311972181973" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="8Direction" id="9" name="Set vector X" sid="5203500742824154" type="Player">
+                                    <param id="0" name="Vector X">-300</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="5875728235533529" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="7453031472389849" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="746597038405959">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="6741098370524445" type="Keyboard">
+                                    <param id="0" name="Key">81 (Q)</param>
+                                </condition>
+                                <condition id="7" inverted="1" name="Is mirrored" sid="2525415151688138" type="spr_Player" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="2859805012487666" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="8Direction" id="9" name="Set vector X" sid="8257904006667887" type="Player">
+                                    <param id="0" name="Vector X">300</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="5237148340529369" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="3081122820440585" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="5456747491881632" title="Jump_Through_Fall">
+                    <sub-events>
+                        <event-block sid="480509151092581">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="5288803748286594" type="Keyboard">
+                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="1261633368508948" type="Keyboard">
+                                    <param id="0" name="Key">83 (S)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="12" name="Fall through" sid="8692419554539575" type="Player" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="4004334311430557">
+                            <conditions>
+                                <condition id="3" name="Is button down" sid="5638834885408596" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">13</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="823743702369804" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="12" name="Fall through" sid="2108699263492766" type="Player" />
                             </actions>
                         </event-block>
                     </sub-events>
@@ -174,6 +320,9 @@
                                 </condition>
                                 <condition behavior="Platform" id="3" inverted="1" name="Is jumping" sid="5870437104492101" type="Player" />
                                 <condition behavior="Platform" id="4" inverted="1" name="Is falling" sid="3486075642918678" type="Player" />
+                                <condition id="2" inverted="1" name="Is playing" sid="9128688982772061" type="spr_Player">
+                                    <param id="0" name="Animation">&quot;attack&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="5687003857596192" type="spr_Player">
@@ -189,6 +338,9 @@
                                 </condition>
                                 <condition behavior="Platform" id="3" inverted="1" name="Is jumping" sid="5589072184706746" type="Player" />
                                 <condition behavior="Platform" id="4" inverted="1" name="Is falling" sid="6361426055600797" type="Player" />
+                                <condition id="2" inverted="1" name="Is playing" sid="4377400097851975" type="spr_Player">
+                                    <param id="0" name="Animation">&quot;attack&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="8224253805872314" type="spr_Player">
@@ -201,6 +353,9 @@
                             <conditions>
                                 <condition behavior="Platform" id="2" name="Is on floor" sid="1169298727328168" type="Player" />
                                 <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="5109067926235271" type="Player" />
+                                <condition id="2" inverted="1" name="Is playing" sid="1021324634855529" type="spr_Player">
+                                    <param id="0" name="Animation">&quot;attack&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="7451007491383602" type="spr_Player">
@@ -223,44 +378,15 @@
                         <event-block sid="6908941718859353">
                             <conditions>
                                 <condition behavior="Platform" id="6" name="On fall" sid="6580380576413785" type="Player" />
+                                <condition id="2" inverted="1" name="Is playing" sid="5315733566453127" type="spr_Player">
+                                    <param id="0" name="Animation">&quot;attack&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="9543773973590018" type="spr_Player">
                                     <param id="0" name="Animation">&quot;Falling&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="5456747491881632" title="Jump_Through_Fall">
-                    <sub-events>
-                        <event-block sid="480509151092581">
-                            <conditions>
-                                <condition id="2" name="Key is down" sid="5288803748286594" type="Keyboard">
-                                    <param id="0" name="Key">40 (Down arrow)</param>
-                                </condition>
-                                <condition id="2" name="Key is down" sid="1261633368508948" type="Keyboard">
-                                    <param id="0" name="Key">83 (S)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Platform" id="12" name="Fall through" sid="8692419554539575" type="Player" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="4004334311430557">
-                            <conditions>
-                                <condition id="3" name="Is button down" sid="5638834885408596" type="Gamepad">
-                                    <param id="0" name="Gamepad">0</param>
-                                    <param id="1" name="Button">13</param>
-                                </condition>
-                                <condition id="3" name="Is button down" sid="823743702369804" type="Gamepad">
-                                    <param id="0" name="Gamepad">0</param>
-                                    <param id="1" name="Button">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Platform" id="12" name="Fall through" sid="2108699263492766" type="Player" />
                             </actions>
                         </event-block>
                     </sub-events>
@@ -305,10 +431,6 @@
                 <action id="-15" name="Set visible" sid="244808399785729" type="spr_Vector">
                     <param id="0" name="Visibility">1</param>
                 </action>
-                <action id="-9" name="Set value" sid="8745520233886247" type="System">
-                    <param id="0" name="Variable">EstaNoChao</param>
-                    <param id="1" name="Value">0</param>
-                </action>
             </actions>
         </event-block>
         <event-block sid="855507218406217">
@@ -323,67 +445,29 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="5076051789776814" title="Dash">
-            <sub-events>
-                <event-block sid="5311614470312749">
-                    <conditions>
-                        <condition id="6" name="On button pressed" sid="5486033576753136" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Button">7</param>
-                        </condition>
-                        <condition id="7" name="Is mirrored" sid="5747614630001154" type="spr_Player" />
-                        <condition id="-14" name="Compare variable" sid="9416322160377815" type="System">
-                            <param id="0" name="Variable">EstaNoChao</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="3235567151347563" type="Player">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action behavior="8Direction" id="9" name="Set vector X" sid="3009173677927279" type="Player">
-                            <param id="0" name="Vector X">-300</param>
-                        </action>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="7295279284785711" type="Player">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="367861883558192" type="System">
-                            <param id="0" name="Variable">EstaNoChao</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="6888772101472824">
-                    <conditions>
-                        <condition id="6" name="On button pressed" sid="8467795761117077" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Button">7</param>
-                        </condition>
-                        <condition id="7" inverted="1" name="Is mirrored" sid="2324581234350742" type="spr_Player" />
-                        <condition id="-14" name="Compare variable" sid="4579870729906842" type="System">
-                            <param id="0" name="Variable">EstaNoChao</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="194725071010149" type="Player">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action behavior="8Direction" id="9" name="Set vector X" sid="7597851372710405" type="Player">
-                            <param id="0" name="Vector X">300</param>
-                        </action>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="2466592615726446" type="Player">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="5966461501939943" type="System">
-                            <param id="0" name="Variable">EstaNoChao</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
+        <event-block sid="1173552745783382">
+            <conditions>
+                <condition id="6" name="On button pressed" sid="7249088306024122" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">2</param>
+                </condition>
+                <condition id="2" inverted="1" name="Is playing" sid="7152813649866429" type="spr_Player">
+                    <param id="0" name="Animation">&quot;attack&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="388640791392256" type="spr_Player">
+                    <param id="0" name="Animation">&quot;Attack&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="8762647102188331" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="9226514114181617" type="spr_Player">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
