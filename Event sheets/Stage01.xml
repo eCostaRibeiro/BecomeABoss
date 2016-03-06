@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Stage01</name>
     <events>
+        <include>Enemies</include>
         <include>Main</include>
     </events>
 </c2eventsheet>

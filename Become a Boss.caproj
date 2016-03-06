@@ -17,10 +17,13 @@
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Persist" version="1">Persist</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -49,7 +52,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">Chrome</prop>
+        <prop name="Preview browser">NW.js</prop>
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -118,29 +121,205 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="8" loop="1" name="Running" pingpong="0" repeatcount="1" repeatto="0" sid="1557524506969094" speed="12">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.9" original-source="C:\Users\brank\Desktop\become a boss\Animation\Running\01.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.9" original-source="C:\Users\brank\Desktop\become a boss\Animation\Running\02.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.9" original-source="C:\Users\brank\Desktop\become a boss\Animation\Running\03.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.9" original-source="C:\Users\brank\Desktop\become a boss\Animation\Running\04.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.9" original-source="C:\Users\brank\Desktop\become a boss\Animation\Running\05.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.9" original-source="C:\Users\brank\Desktop\become a boss\Animation\Running\06.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.9" original-source="C:\Users\brank\Desktop\become a boss\Animation\Running\07.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.9" original-source="C:\Users\brank\Desktop\become a boss\Animation\Running\08.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.9" original-source="C:\Users\brank\Desktop\become a boss\Animation\Running\01.png">
+                        <collision-poly>
+                            <point x="0.544643" y="0.483144" />
+                            <point x="0.526339" y="0.473201" />
+                            <point x="0.516518" y="0.50625" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.9" original-source="C:\Users\brank\Desktop\become a boss\Animation\Running\02.png">
+                        <collision-poly>
+                            <point x="0.544643" y="0.492424" />
+                            <point x="0.544643" y="0.439394" />
+                            <point x="0.535714" y="0.507576" />
+                            <point x="0.482143" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.9" original-source="C:\Users\brank\Desktop\become a boss\Animation\Running\03.png">
+                        <collision-poly>
+                            <point x="0.544643" y="0.492424" />
+                            <point x="0.544643" y="0.439394" />
+                            <point x="0.535714" y="0.507576" />
+                            <point x="0.482143" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.9" original-source="C:\Users\brank\Desktop\become a boss\Animation\Running\04.png">
+                        <collision-poly>
+                            <point x="0.544643" y="0.492424" />
+                            <point x="0.544643" y="0.439394" />
+                            <point x="0.535714" y="0.507576" />
+                            <point x="0.482143" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.9" original-source="C:\Users\brank\Desktop\become a boss\Animation\Running\05.png">
+                        <collision-poly>
+                            <point x="0.544643" y="0.492424" />
+                            <point x="0.544643" y="0.439394" />
+                            <point x="0.535714" y="0.507576" />
+                            <point x="0.482143" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.9" original-source="C:\Users\brank\Desktop\become a boss\Animation\Running\06.png">
+                        <collision-poly>
+                            <point x="0.544643" y="0.492424" />
+                            <point x="0.544643" y="0.439394" />
+                            <point x="0.535714" y="0.507576" />
+                            <point x="0.482143" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.9" original-source="C:\Users\brank\Desktop\become a boss\Animation\Running\07.png">
+                        <collision-poly>
+                            <point x="0.544643" y="0.492424" />
+                            <point x="0.544643" y="0.439394" />
+                            <point x="0.535714" y="0.507576" />
+                            <point x="0.482143" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.9" original-source="C:\Users\brank\Desktop\become a boss\Animation\Running\08.png">
+                        <collision-poly>
+                            <point x="0.544643" y="0.492424" />
+                            <point x="0.544643" y="0.439394" />
+                            <point x="0.535714" y="0.507576" />
+                            <point x="0.482143" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="4" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="8927398976288348" speed="7">
-                    <frame duration="1" hotspotX="0.535714" hotspotY="0.969697" original-source="C:\Users\brank\Desktop\become a boss\Animation\Idle\01.png" />
-                    <frame duration="1" hotspotX="0.535714" hotspotY="0.969697" original-source="C:\Users\brank\Desktop\become a boss\Animation\Idle\02.png" />
-                    <frame duration="1" hotspotX="0.535714" hotspotY="0.969697" original-source="C:\Users\brank\Desktop\become a boss\Animation\Idle\03.png" />
-                    <frame duration="1" hotspotX="0.535714" hotspotY="0.969697" original-source="C:\Users\brank\Desktop\become a boss\Animation\Idle\04.png" />
+                    <frame duration="1" hotspotX="0.535714" hotspotY="0.969697" original-source="C:\Users\brank\Desktop\become a boss\Animation\Idle\01.png">
+                        <collision-poly>
+                            <point x="0.544643" y="0.492424" />
+                            <point x="0.544643" y="0.439394" />
+                            <point x="0.535714" y="0.507576" />
+                            <point x="0.482143" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.535714" hotspotY="0.969697" original-source="C:\Users\brank\Desktop\become a boss\Animation\Idle\02.png">
+                        <collision-poly>
+                            <point x="0.544643" y="0.492424" />
+                            <point x="0.544643" y="0.439394" />
+                            <point x="0.535714" y="0.507576" />
+                            <point x="0.482143" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.535714" hotspotY="0.969697" original-source="C:\Users\brank\Desktop\become a boss\Animation\Idle\03.png">
+                        <collision-poly>
+                            <point x="0.544643" y="0.492424" />
+                            <point x="0.544643" y="0.439394" />
+                            <point x="0.535714" y="0.507576" />
+                            <point x="0.482143" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.535714" hotspotY="0.969697" original-source="C:\Users\brank\Desktop\become a boss\Animation\Idle\04.png">
+                        <collision-poly>
+                            <point x="0.544643" y="0.492424" />
+                            <point x="0.544643" y="0.439394" />
+                            <point x="0.535714" y="0.507576" />
+                            <point x="0.482143" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="3" loop="0" name="Jumping" pingpong="0" repeatcount="0" repeatto="0" sid="1276324533952826" speed="6">
-                    <frame duration="1" hotspotX="0.55" hotspotY="0.925" original-source="C:\Users\brank\Desktop\become a boss\Animation\Jumping\01.png" />
-                    <frame duration="1" hotspotX="0.55" hotspotY="0.925" />
-                    <frame duration="1" hotspotX="0.55" hotspotY="0.925" original-source="C:\Users\brank\Desktop\become a boss\Animation\Jumping\02.png" />
+                    <frame duration="1" hotspotX="0.55" hotspotY="0.925" original-source="C:\Users\brank\Desktop\become a boss\Animation\Jumping\01.png">
+                        <collision-poly>
+                            <point x="0.544643" y="0.492424" />
+                            <point x="0.544643" y="0.439394" />
+                            <point x="0.535714" y="0.507576" />
+                            <point x="0.482143" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.55" hotspotY="0.925">
+                        <collision-poly>
+                            <point x="0.544643" y="0.492424" />
+                            <point x="0.544643" y="0.439394" />
+                            <point x="0.535714" y="0.507576" />
+                            <point x="0.482143" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.55" hotspotY="0.925" original-source="C:\Users\brank\Desktop\become a boss\Animation\Jumping\02.png">
+                        <collision-poly>
+                            <point x="0.544643" y="0.492424" />
+                            <point x="0.544643" y="0.439394" />
+                            <point x="0.535714" y="0.507576" />
+                            <point x="0.482143" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="2" loop="0" name="Falling" pingpong="0" repeatcount="1" repeatto="0" sid="7421375200484354" speed="10">
-                    <frame duration="1" hotspotX="0.55" hotspotY="0.925" original-source="C:\Users\brank\Desktop\become a boss\Animation\Jumping\03.png" />
-                    <frame duration="1" hotspotX="0.55" hotspotY="0.925" original-source="C:\Users\brank\Desktop\become a boss\Animation\Falling\01_teste.png" />
+                    <frame duration="1" hotspotX="0.55" hotspotY="0.925" original-source="C:\Users\brank\Desktop\become a boss\Animation\Jumping\03.png">
+                        <collision-poly>
+                            <point x="0.544643" y="0.492424" />
+                            <point x="0.544643" y="0.439394" />
+                            <point x="0.535714" y="0.507576" />
+                            <point x="0.482143" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.55" hotspotY="0.925" original-source="C:\Users\brank\Desktop\become a boss\Animation\Falling\01_teste.png">
+                        <collision-poly>
+                            <point x="0.544643" y="0.492424" />
+                            <point x="0.544643" y="0.439394" />
+                            <point x="0.535714" y="0.507576" />
+                            <point x="0.482143" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="7" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="6185108500941808" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.9">
+                        <collision-poly>
+                            <point x="0.99375" y="0.0736743" />
+                            <point x="0.994643" y="0.414394" />
+                            <point x="0.991964" y="0.763826" />
+                            <point x="0.157143" y="0.525" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.9">
+                        <collision-poly>
+                            <point x="0.99375" y="0.0736743" />
+                            <point x="0.994643" y="0.414394" />
+                            <point x="0.991964" y="0.763826" />
+                            <point x="0.157143" y="0.525" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.9">
+                        <collision-poly>
+                            <point x="0.99375" y="0.0736743" />
+                            <point x="0.994643" y="0.414394" />
+                            <point x="0.991964" y="0.763826" />
+                            <point x="0.157143" y="0.525" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.9">
+                        <collision-poly>
+                            <point x="0.99375" y="0.0736743" />
+                            <point x="0.994643" y="0.414394" />
+                            <point x="0.991964" y="0.763826" />
+                            <point x="0.157143" y="0.525" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.9">
+                        <collision-poly>
+                            <point x="0.99375" y="0.0736743" />
+                            <point x="0.994643" y="0.414394" />
+                            <point x="0.991964" y="0.763826" />
+                            <point x="0.157143" y="0.525" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.9">
+                        <collision-poly>
+                            <point x="0.99375" y="0.0736743" />
+                            <point x="0.994643" y="0.414394" />
+                            <point x="0.991964" y="0.763826" />
+                            <point x="0.157143" y="0.525" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.9">
+                        <collision-poly>
+                            <point x="0.99375" y="0.0736743" />
+                            <point x="0.994643" y="0.414394" />
+                            <point x="0.991964" y="0.763826" />
+                            <point x="0.157143" y="0.525" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -422,12 +601,113 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Enemy_01" sid="969885180454718">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Move_Time" sid="9514697089707359" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="CustomMovement" sid="1336599768282881">
+                    <behavior id="custom" />
+                </behavior-type>
+                <behavior-type name="Platform" sid="2670003417798342">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="155156577282313" speed="5">
+                    <frame duration="1" hotspotX="0.533333" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spr_Move_Border" sid="1258797458759317">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="625954521812225" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spr_Enemy_02" sid="1088631366172885">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="On_Atack" sid="4594492449234873" type="boolean" />
+                <instance-variable name="Time_To_Atack" sid="4138895697073815" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6023489597709772" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Colider_Area_Archer" sid="7981139869317243">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3223339053457808" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Arrow_01" sid="1634254165432">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="7877604462487718">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7041037495990135" speed="5">
+                    <frame duration="1" hotspotX="0.0454545" hotspotY="0.666667" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Arrow_02" sid="8483469638351474">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="9411112247670802">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3931196997824084" speed="5">
+                    <frame duration="1" hotspotX="1" hotspotY="0.666667" />
+				</animation>
+			</animation-folder>
+		</object-type>
+        <object-type name="Enemy" sid="4084642252604422">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="5358723779545258">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9344820395735917" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="Ene" plugin-id="Sprite" sid="7715895824759642">
+            <members>
+                <member>Enemy</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="HP" sid="6516692065362353" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Flash" sid="2788309294780282">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+        </family>
+    </families>
     <layout-folder>
         <layout>Base.xml</layout>
         <layout>Stage01.xml</layout>
         <layout>Temple_Teste.xml</layout>
+        <layout>Enemy_Workflow.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Main.xml</event-sheet>
@@ -436,6 +716,8 @@
         <event-sheet>Stage01.xml</event-sheet>
         <event-sheet>Doors.xml</event-sheet>
         <event-sheet>Temple_Teste.xml</event-sheet>
+        <event-sheet>Enemy_Workflow.xml</event-sheet>
+        <event-sheet>Enemies.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="3" />
