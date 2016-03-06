@@ -1996,13 +1996,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-<<<<<<< HEAD
                         <x>711</x>
                         <y>294</y>
-=======
-                        <x>60</x>
-                        <y>480</y>
->>>>>>> branko
                         <z>0</z>
                         <width>13</width>
                         <height>29</height>

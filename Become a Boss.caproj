@@ -671,7 +671,19 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3931196997824084" speed="5">
                     <frame duration="1" hotspotX="1" hotspotY="0.666667" />
-
+				</animation>
+			</animation-folder>
+		</object-type>
+        <object-type name="Enemy" sid="4084642252604422">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="5358723779545258">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9344820395735917" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -704,8 +716,8 @@
         <event-sheet>Stage01.xml</event-sheet>
         <event-sheet>Doors.xml</event-sheet>
         <event-sheet>Temple_Teste.xml</event-sheet>
-
         <event-sheet>Enemy_Workflow.xml</event-sheet>
+        <event-sheet>Enemies.xml</event-sheet>
 
     </event-folder>
     <global-instances>
